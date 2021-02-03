@@ -9,7 +9,7 @@ VRChat関連のいろいろなものを作ってみました。ここにある�
 
 ちなみに私はまだシェーダーの経験が浅いので、恐らくこれはかなりひどい書き方になっていると思います。
 
-#### [フェイクスポットライトダウンロード ](https://github.com/acertainbluecat/VRChat-odds-and-ends/releases/download/unitypackages/FakeSpotlight_v0.1.1.unitypackage)  
+#### [フェイクスポットライトダウンロード ](https://github.com/acertainbluecat/VRChat-odds-and-ends/releases/download/unitypackages/FakeSpotlight_v0.1.2.unitypackage)  
 
 ### シェーダの設定
 - Color Tint - 光の色を着色します。

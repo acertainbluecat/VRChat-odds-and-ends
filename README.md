@@ -9,7 +9,7 @@ Just a simple shader using a grab pass and some stencils to create the appearanc
 
 For the record I'm still quite inexperienced with Shaders so this is probably quite terribly written.
 
-#### [Download Fake Spotlight](https://github.com/acertainbluecat/VRChat-odds-and-ends/releases/download/unitypackages/FakeSpotlight_v0.1.1.unitypackage)  
+#### [Download Fake Spotlight](https://github.com/acertainbluecat/VRChat-odds-and-ends/releases/download/unitypackages/FakeSpotlight_v0.1.2.unitypackage)  
 
 ### Shader settings
 - Color Tint - Tints the color of the light
