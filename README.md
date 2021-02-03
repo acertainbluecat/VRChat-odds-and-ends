@@ -9,6 +9,8 @@ Just a simple shader using a grab pass and some stencils to create the appearanc
 
 For the record I'm still quite inexperienced with Shaders so this is probably quite terribly written.
 
+#### [Download Fake Spotlight](https://github.com/acertainbluecat/VRChat-odds-and-ends/releases/download/unitypackages/FakeSpotlight_v0.1.1.unitypackage)  
+
 ### Shader settings
 - Color Tint - Tints the color of the light
 - Light Angle Override - Overrides the angle of the spotlight. Keep in mind adjusting the spotlight mesh should be a first choice as this won't affect the bounding box of the spotlight mesh and thus may cause occlusion issues.
@@ -16,12 +18,19 @@ For the record I'm still quite inexperienced with Shaders so this is probably qu
 - Dark Light - Changes light so it darkens instead. Brightness of 1 is pitch black.
 - Brightness - The intensity of the light
 - Brightness Multiplier - Multiplier for the above intensity
+- Hue - Hue shift function
 - Saturation - 0 - black and white, 1 - normal, 2 - doubled saturation
 - Contrast - 0.5 - 1.5 Contrast range
 - White balance (Temperature) - blue/yellow color shift
 - White balance (Tint) - pink/green color shift
 - Stencil ID - This shader uses a stencil to achieve the spotlight effect, so just pick a number between 1-255 to reduce chance of conflict with other shaders using stencils
 
-#### [Download Fake Spotlight](https://github.com/acertainbluecat/VRChat-odds-and-ends/releases/download/unitypackages/FakeSpotlight_v0.1.unitypackage)  
-![Fake Spotlight](https://nyanpa.su/i/wCic1dEj.jpg)
+# Caveats
+
+- Does not work in completely dark scenes
+- Cannot overlap lights if they have different settings
+- Shader code is a bit inefficient
+
+![Fake Spotlight Preview 1](https://nyanpa.su/i/JdQ11dJ5.jpg)
+![Fake Spotlight Preview 2](https://nyanpa.su/i/v2xM1dOK.jpg)
 ---
