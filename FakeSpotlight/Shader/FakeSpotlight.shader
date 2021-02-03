@@ -1,18 +1,22 @@
-﻿Shader "Temporal/FakeSpotlight" {
-    
+﻿// I don't know what I'm doing pls be gentle
+
+Shader "Temporal/FakeSpotlight" {
+
     Properties {
         _Color("Color Tint", Color) = (1,1,1,1)
         _LightAngle ("Light Angle Override", range(0, 10)) = 0
         _LightDistance ("Light Distance Override", range(0,50)) = 1
-        [Toggle] _DarkLight("Dark Light", Float) = 0
+        [Space] [Toggle] _DarkLight("Dark Light", Float) = 0
         _Brightness ("Brightness", Range(0,1)) = 0
         _BrightnessMultiplier ("Brightness Multiplier", Range(1,20)) = 1
-        _Hue("Hue Shift", Range(-180,180)) = 0
+        [Space] _Hue("Hue Shift", Range(-180,180)) = 0
         _Saturation ("Saturation", Range(0,2)) = 1
         _Contrast ("Contrast", Range(0.5,1.5)) = 1
-        _Temperature ("White Balance (Temperature)", Range(-0.5,0.5)) = 0
+        [Space] _Temperature ("White Balance (Temperature)", Range(-0.5,0.5)) = 0
         _Tint("White Balance (Tint)", Range(-0.5,0.5)) = 0
-        _Stencil ("Stencil ID", Float) = 178
+        [Space] [Toggle] _Mosaic("Enable Mosaic", Float) = 0
+        _MosaicBlockSize("Mosaic Block Size", Range(25, 250)) = 50
+        [Space(10)] _Stencil ("Stencil ID", Float) = 178
     }
 
     SubShader {
@@ -113,6 +117,8 @@
             float _Temperature;
             float _Tint;
             float _Contrast;
+            float _Mosaic;
+            float _MosaicBlockSize;
 
             float _LightAngle;
             float _LightDistance;
@@ -227,14 +233,20 @@
             
             fixed4 frag (v2f i) : SV_Target {
             
-                float4 col = tex2D(_GrabFakeLight, (i.uv.xy/i.uv.w));   
+                float2 uv = (i.uv.xy/i.uv.w);
+
+                if (_Mosaic) {
+                    uv = floor(uv * _MosaicBlockSize) / _MosaicBlockSize;
+                }
+
+                float4 col = tex2D(_GrabFakeLight, uv);   
                 col.a = 1;
 
                 col.rgb *= _Color.rgb;
-                col.rgb = Unity_Hue_Degrees_float(col.rgb, _Hue);
-                col.rgb = Unity_Saturation_float(col.rgb, _Saturation);
-                col.rgb = Unity_Temperature(col.rgb, _Temperature, _Tint);
-                col.rgb = Unity_Contrast_float(col.rgb, _Contrast);
+                col.rgb = _Hue != 0 ?                       Unity_Hue_Degrees_float(col.rgb, _Hue)          : col.rgb;
+                col.rgb = _Saturation != 1 ?                Unity_Saturation_float(col.rgb, _Saturation)    : col.rgb;
+                col.rgb = _Temperature != 0 || _Tint != 0 ? Unity_Temperature(col.rgb, _Temperature, _Tint) : col.rgb;
+                col.rgb = _Contrast != 1 ?                  Unity_Contrast_float(col.rgb, _Contrast)         : col.rgb;
 
                 if (_DarkLight) {
                     col.rgb *= 1 - _Brightness;
