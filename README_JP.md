@@ -23,6 +23,8 @@ VRChat関連のいろいろなものを作ってみました。ここにある�
 - Contrast - 0.5 - 1.5 コントラスト範囲
 - White balance (Temperature) - 青/黄のカラーシフト
 - White balance (Tint) - ピンク/グリーンカラーシフト
+- Enable Mosaic - シンプルなモザイクフィルタ
+- Mosaic block size - モザイク用のブロックのサイズ/数
 - Stencil ID - このシェーダは、スポットライト効果を得るためにステンシルを使用します。
 
 # 警告

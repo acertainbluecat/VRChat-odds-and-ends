@@ -23,6 +23,8 @@ For the record I'm still quite inexperienced with Shaders so this is probably qu
 - Contrast - 0.5 - 1.5 Contrast range
 - White balance (Temperature) - blue/yellow color shift
 - White balance (Tint) - pink/green color shift
+- Enable Mosaic - Simple mosaic filter
+- Mosaic block size - Size/number of blocks for the mosaic
 - Stencil ID - This shader uses a stencil to achieve the spotlight effect, so just pick a number between 1-255 to reduce chance of conflict with other shaders using stencils
 
 # Caveats
