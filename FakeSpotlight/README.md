@@ -1,15 +1,8 @@
-# VRChat odds and ends
-
-Just a collection of various VRChat related things I've made. Items here are probably not going to be very polished, and are mostly just experiments I've been tinkering around with. 
-
---- 
 # Fake Spotlight
 
 Just a simple shader using a grab pass and some stencils to create the appearance of a spotlight. As it is not a real light, it will not work in complete darkness, as it is just multiplying the intensity of whatever you see. A result of this is that the brightness of the spotlight is relative to how dark or bright the objects its shining on are, as it is multiplicative. Because it is not real spotlight, it does not cast shadows, does not get occluded by objects, or have its brightness fall off over distance. It also comes with a few simple color adjustment settings. However, just because it is not a real light doesn't mean you should use this freely, as it still uses a Grab Pass. This is not meant to be any sort of replacement for spotlights, I'm just using this for a gimmick, but maybe someone else might have a use for it.
 
 For the record I'm still quite inexperienced with Shaders so this is probably quite terribly written.
-
-#### [Download Fake Spotlight](https://github.com/acertainbluecat/VRChat-odds-and-ends/releases/download/unitypackages/FakeSpotlight_v0.1.3.unitypackage)  
 
 ### Shader settings
 
@@ -40,7 +33,3 @@ For the record I'm still quite inexperienced with Shaders so this is probably qu
 #### 4th Feb 2020
 
 - Added a simplified variant without a grab pass, with just color tinting and the light can only make objects twice as bright.
-
-![Fake Spotlight Preview 1](https://nyanpa.su/i/JdQ11dJ5.jpg)
-![Fake Spotlight Preview 2](https://nyanpa.su/i/v2xM1dOK.jpg)
----
