@@ -246,7 +246,7 @@ Shader "Temporal/FakeSpotlight" {
                 col.rgb = _Hue != 0 ?                       Unity_Hue_Degrees_float(col.rgb, _Hue)          : col.rgb;
                 col.rgb = _Saturation != 1 ?                Unity_Saturation_float(col.rgb, _Saturation)    : col.rgb;
                 col.rgb = _Temperature != 0 || _Tint != 0 ? Unity_Temperature(col.rgb, _Temperature, _Tint) : col.rgb;
-                col.rgb = _Contrast != 1 ?                  Unity_Contrast_float(col.rgb, _Contrast)         : col.rgb;
+                col.rgb = _Contrast != 1 ?                  Unity_Contrast_float(col.rgb, _Contrast)        : col.rgb;
 
                 if (_DarkLight) {
                     col.rgb *= 1 - _Brightness;
