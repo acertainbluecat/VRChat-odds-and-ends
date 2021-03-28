@@ -9,7 +9,12 @@ Just a simple shader using a grab pass and some stencils to create the appearanc
 
 For the record I'm still quite inexperienced with Shaders so this is probably quite terribly written.
 
-#### [Download Fake Spotlight](https://github.com/acertainbluecat/VRChat-odds-and-ends/releases/download/unitypackages/FakeSpotlight_v0.1.3.unitypackage)  
+#### [Download Fake Spotlight](https://github.com/acertainbluecat/VRChat-odds-and-ends/releases/download/unitypackages/FakeSpotlight_v0.1.3a.unitypackage)  
+
+### Shader Types
+
+- FakeSpotlight - Regular version using grabpass for various effects
+- FakeSpotlightNoGrabPass - Version without grabpass, only has color tinting. 
 
 ### Shader settings
 
@@ -37,7 +42,11 @@ For the record I'm still quite inexperienced with Shaders so this is probably qu
 
 # Update History
 
-#### 4th Feb 2020
+#### 28th Mar 2021
+
+- Minor fixes
+
+#### 4th Feb 2021
 
 - Added a simplified variant without a grab pass, with just color tinting and the light can only make objects twice as bright.
 

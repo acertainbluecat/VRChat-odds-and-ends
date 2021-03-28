@@ -9,7 +9,12 @@ VRChat関連のいろいろなものを作ってみました。ここにある�
 
 ちなみに私はまだシェーダーの経験が浅いので、恐らくこれはかなりひどい書き方になっていると思います。
 
-#### [フェイクスポットライトダウンロード ](https://github.com/acertainbluecat/VRChat-odds-and-ends/releases/download/unitypackages/FakeSpotlight_v0.1.3.unitypackage)  
+#### [フェイクスポットライトダウンロード ](https://github.com/acertainbluecat/VRChat-odds-and-ends/releases/download/unitypackages/FakeSpotlight_v0.1.3a.unitypackage)  
+
+### シェーダの種類
+
+- FakeSpotlight - 様々な効果のためにGrabpassを使用した通常バージョン
+- FakeSpotlightNoGrabPass - Grabpassを使用しないバージョンで、カラーティントのみを行います。
 
 ### シェーダの設定
 
@@ -36,6 +41,10 @@ VRChat関連のいろいろなものを作ってみました。ここにある�
 - シェーダーコードは少し効率が悪い
 
 # 更新履歴
+
+#### 28th Mar 2021
+
+- 細かい修正
 
 #### 4th Feb 2020
 
