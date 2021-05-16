@@ -6,7 +6,7 @@ Shader "Temporal/FakeSpotlight" {
         _Color("Color Tint", Color) = (1,1,1,1)
         [Space(25)] _LightAngle ("Light Angle Override", range(0, 10)) = 0
         _LightDistance ("Light Distance Override", range(0,50)) = 1
-        [Space(25)] [Toggle] _DarkLight("Dark Light", Float) = 0
+        [Space(25)] [ToggleUI] _DarkLight("Dark Light", Float) = 0
         _Brightness ("Brightness", Range(0,1)) = 0
         _BrightnessMultiplier ("Brightness Multiplier", Range(1,20)) = 1
         [Space(25)] _Hue("Hue Shift", Range(-180,180)) = 0
@@ -14,7 +14,7 @@ Shader "Temporal/FakeSpotlight" {
         _Contrast ("Contrast", Range(0.5,1.5)) = 1
         [Space(25)] _Temperature ("White Balance (Temperature)", Range(-0.5,0.5)) = 0
         _Tint("White Balance (Tint)", Range(-0.5,0.5)) = 0
-        [Space(25)] [Toggle] _Mosaic("Enable Mosaic", Float) = 0
+        [Space(25)] [ToggleUI] _Mosaic("Enable Mosaic", Float) = 0
         _MosaicBlockSize("Mosaic Block Size", Range(25, 250)) = 50
         [Space(25)] _Stencil ("Stencil ID", Float) = 178
     }

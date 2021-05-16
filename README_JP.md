@@ -9,7 +9,7 @@ VRChat関連のいろいろなものを作ってみました。ここにある�
 
 ちなみに私はまだシェーダーの経験が浅いので、恐らくこれはかなりひどい書き方になっていると思います。
 
-#### [フェイクスポットライトダウンロード ](https://github.com/acertainbluecat/VRChat-odds-and-ends/releases/download/unitypackages/FakeSpotlight_v0.1.3a.unitypackage)  
+#### [フェイクスポットライトダウンロード ](https://github.com/acertainbluecat/VRChat-odds-and-ends/releases/download/unitypackages/FakeSpotlight_v0.1.4.unitypackage)  
 
 ### シェーダの種類
 
@@ -42,11 +42,15 @@ VRChat関連のいろいろなものを作ってみました。ここにある�
 
 # 更新履歴
 
+#### 16th May 2021
+
+  - シェーダーでToggleからToggleUIに変更し、使用するシェーダーキーワードを減らしました。
+
 #### 28th Mar 2021
 
 - 細かい修正
 
-#### 4th Feb 2020
+#### 4th Feb 2021
 
 - グラブパスなしの簡易バリアントを追加して、色の着色だけで、光はオブジェクトを2倍の明るさにすることができるようになりました。
 

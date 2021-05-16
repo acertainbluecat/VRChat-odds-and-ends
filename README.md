@@ -9,7 +9,7 @@ Just a simple shader using a grab pass and some stencils to create the appearanc
 
 For the record I'm still quite inexperienced with Shaders so this is probably quite terribly written.
 
-#### [Download Fake Spotlight](https://github.com/acertainbluecat/VRChat-odds-and-ends/releases/download/unitypackages/FakeSpotlight_v0.1.3a.unitypackage)  
+#### [Download Fake Spotlight](https://github.com/acertainbluecat/VRChat-odds-and-ends/releases/download/unitypackages/FakeSpotlight_v0.1.4.unitypackage)  
 
 ### Shader Types
 
@@ -41,6 +41,10 @@ For the record I'm still quite inexperienced with Shaders so this is probably qu
 - Shader code is a bit inefficient
 
 # Update History
+
+#### 16th May 2021
+
+  - Switched from Toggle to ToggleUI in shaders to reduce shader keywords used
 
 #### 28th Mar 2021
 
